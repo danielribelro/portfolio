@@ -1,53 +1,24 @@
-const navbar = document.getElementById('navbar');
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-const revealEls = document.querySelectorAll('.reveal');
-const skillFills = document.querySelectorAll('.skill-fill');
+const glow = document.querySelector('.cursor-glow');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-
-  revealEls.forEach((el, i) => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.88) {
-      setTimeout(() => el.classList.add('visible'), i * 80);
-    }
-  });
-
-  skillFills.forEach(fill => {
-    const rect = fill.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.95 && fill.style.width === '') {
-      fill.style.width = fill.dataset.width + '%';
-    }
-  });
+document.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
 });
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
+// Revelação suave ao rolar
+const observerOptions = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, observerOptions);
 
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-  });
+document.querySelectorAll('.project-card, .skill-item').forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "all 0.6s ease-out";
+    observer.observe(el);
 });
-
-document.getElementById('contatoForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = 'Mensagem enviada!';
-  btn.style.background = '#16a34a';
-  btn.style.borderColor = '#16a34a';
-  setTimeout(() => {
-    btn.innerHTML = 'Enviar Mensagem <i class="fa-solid fa-paper-plane"></i>';
-    btn.style.background = '';
-    btn.style.borderColor = '';
-    e.target.reset();
-  }, 3000);
-});
-
-window.dispatchEvent(new Event('scroll'));

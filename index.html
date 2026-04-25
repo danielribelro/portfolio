@@ -1,260 +1,97 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Ribeiro | Desenvolvedor Front-End</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Ribeiro | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="cursor-glow"></div>
 
-<nav class="navbar" id="navbar">
-  <div class="nav-container">
-    <a href="#" class="nav-logo">DR<span>.</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">DR<span>/</span></div>
+            <div class="nav-links">
+                <a href="#home">Início</a>
+                <a href="#skills">Skills</a>
+                <a href="#projetos">Projetos</a>
+                <a href="mailto:contato@exemplo.com" class="btn-talk">Vamos conversar?</a>
+            </div>
+        </div>
+    </nav>
 
-<header class="hero">
-  <div class="hero-content">
-    <p class="hero-tag">Olá, eu sou</p>
-    <h1>Daniel Ribeiro</h1>
-    <p class="hero-sub">Desenvolvedor Front-End Jr em formação</p>
-    <p class="hero-desc">Apaixonado por criar interfaces modernas, responsivas e com boa experiência de usuário.</p>
-    <div class="buttons">
-      <a href="#projetos" class="btn">Ver Projetos</a>
-      <a href="#contato" class="btn outline">Fale Comigo</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <a href="#sobre"><i class="fa-solid fa-chevron-down"></i></a>
-  </div>
-</header>
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <span class="badge">Disponível para novos projetos</span>
+            <h1>Construindo o futuro através de <span>código eficiente.</span></h1>
+            <p>Desenvolvedor Full Stack especializado em ecossistemas escaláveis com Java, .NET e interfaces modernas em Vue.js.</p>
+            <div class="hero-btns">
+                <a href="#projetos" class="btn-primary">Ver Portfólio</a>
+                <a href="https://github.com/danielribelro" target="_blank" class="btn-secondary">GitHub <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
 
-<section id="sobre">
-  <div class="section-header">
-    <h2>Sobre Mim</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="sobre-content">
-    <div class="sobre-avatar">
-      <img src="foto.png" alt="Daniel Ribeiro" class="avatar-img">
-    </div>
-    <div class="sobre-text">
-      <p>
-        Sou estudante de tecnologia e desenvolvedor Full-Stack em início de carreira,
-        com experiência em Front-End usando <strong>HTML</strong>, <strong>JavaScript</strong>, <strong>React</strong> e <strong>Vue.js</strong>,
-        Back-End com <strong>Java</strong>, <strong>Python</strong>, <strong>C#</strong> e <strong>Node.js</strong>,
-        e bancos de dados como <strong>MySQL</strong> e <strong>MongoDB</strong>.
-      </p>
-      <p>
-        Estou construindo projetos práticos para desenvolver minhas habilidades e busco minha
-        primeira oportunidade como desenvolvedor júnior ou estagiário.
-      </p>
-      <div class="sobre-info">
-        <span><i class="fa-solid fa-location-dot"></i> Brasil</span>
-        <span><i class="fa-solid fa-graduation-cap"></i> Em formação</span>
-        <span><i class="fa-solid fa-briefcase"></i> Disponível para oportunidades</span>
-        <span><i class="fa-solid fa-house-laptop"></i> Home Office</span>
-      </div>
-    </div>
-  </div>
-</section>
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Tecnologias</h2>
+            <div class="skill-grid">
+                <div class="skill-item"><i class="fab fa-java"></i><span>Java (Spring)</span></div>
+                <div class="skill-item"><i class="fas fa-code"></i><span>.NET / C#</span></div>
+                <div class="skill-item"><i class="fab fa-vuejs"></i><span>Vue.js</span></div>
+                <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+                <div class="skill-item"><i class="fas fa-database"></i><span>SQL / NoSQL</span></div>
+            </div>
+        </div>
+    </section>
 
-<section id="projetos">
-  <div class="section-header">
-    <h2>Projetos</h2>
-    <div class="section-line"></div>
-  </div>
+    <section id="projetos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos Selecionados</h2>
+            <div class="project-list">
+                
+                <div class="project-card">
+                    <div class="project-info">
+                        <span class="project-tag">Full Stack</span>
+                        <h3>Smart Pantry System</h3>
+                        <p>Plataforma de gestão inteligente utilizando arquitetura de microserviços com C# e frontend reativo em Vue.js.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-layer-group"></i> .NET Core</span>
+                            <span><i class="fas fa-database"></i> MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/danielribelro/smart-pantry-app" target="_blank" class="btn-live">Acessar Projeto <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/danielribelro" target="_blank" class="btn-repo-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="card reveal">
-      <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
-      <h3>Finance App</h3>
-      <p>Aplicação Full-Stack de controle financeiro pessoal com autenticação JWT, cadastro de transações e dashboard com gráficos.</p>
-      <div class="card-tags">
-        <span>React</span>
-        <span>Node.js</span>
-        <span>MongoDB</span>
-        <span>JWT</span>
-      </div>
-      <div class="card-links">
-        <a href="https://github.com/danielribelro/finance-app" target="_blank"><i class="fa-brands fa-github"></i> Código</a>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="project-card">
+                    <div class="project-info">
+                        <span class="project-tag">Backend</span>
+                        <h3>Crypto Tracker Pro</h3>
+                        <p>Engine de processamento de dados em tempo real integrado à API CoinCap, focado em alta performance.</p>
+                        <div class="project-meta">
+                            <span><i class="fab fa-java"></i> Java 17</span>
+                            <span><i class="fas fa-bolt"></i> API CoinCap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/danielribelro/crypto-dashboard-react" target="_blank" class="btn-live">Acessar Projeto <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/danielribelro" target="_blank" class="btn-repo-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
 
-<section id="habilidades">
-  <div class="section-header">
-    <h2>Habilidades</h2>
-    <div class="section-line"></div>
-  </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="skills-grid">
-    <div class="skill-item reveal">
-      <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>HTML</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon js"><i class="fa-brands fa-js"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>JavaScript</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon java"><i class="fa-brands fa-java"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>Java</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon py"><i class="fa-brands fa-python"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>Python</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon cs"><i class="fa-solid fa-code"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>C#</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon react"><i class="fa-brands fa-react"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>React</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon vue"><i class="fa-brands fa-vuejs"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>Vue.js</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon node"><i class="fa-brands fa-node-js"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>Node.js</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon mysql"><i class="fa-solid fa-database"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>MySQL</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon mongo"><i class="fa-solid fa-leaf"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>MongoDB</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon git"><i class="fa-brands fa-git-alt"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>Git</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon github"><i class="fa-brands fa-github"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>GitHub</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-    <div class="skill-item reveal">
-      <div class="skill-icon jwt"><i class="fa-solid fa-key"></i></div>
-      <div class="skill-info">
-        <div class="skill-label"><span>JWT</span><span>Intermediário</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <footer>
+        <p>&copy; 2026 Daniel Ribeiro. Desenvolvido com foco em performance.</p>
+    </footer>
 
-<section id="contato">
-  <div class="section-header">
-    <h2>Contato</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="contato-wrapper">
-    <div class="contato-info reveal">
-      <h3>Vamos conversar?</h3>
-      <p>Estou aberto a oportunidades de estágio, freela ou projetos. Entre em contato!</p>
-      <ul class="contato-links">
-        <li>
-          <a href="mailto:danielsribelro.contato@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-            danielsribelro.contato@gmail.com
-          </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com/in/danielribeirodev" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-            linkedin.com/in/danielribeirodev
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/danielribelro" target="_blank">
-            <i class="fa-brands fa-github"></i>
-            https://github.com/danielribelro
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <form class="contato-form reveal" id="contatoForm">
-      <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" placeholder="Seu nome" required>
-      </div>
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="seu@email.com" required>
-      </div>
-      <div class="form-group">
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
-      </div>
-      <button type="submit" class="btn btn-full">Enviar Mensagem <i class="fa-solid fa-paper-plane"></i></button>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-content">
-    <p class="footer-logo">DR<span>.</span></p>
-    <p>Feito com <i class="fa-solid fa-heart"></i> por Daniel Ribeiro</p>
-    <p class="footer-copy">© 2026 Todos os direitos reservados</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
