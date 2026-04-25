@@ -1,12 +1,16 @@
 const glow = document.querySelector('.cursor-glow');
 
 document.addEventListener('mousemove', (e) => {
+    // Faz o brilho seguir o mouse suavemente
     glow.style.left = e.clientX + 'px';
     glow.style.top = e.clientY + 'px';
 });
 
-// Revelação suave ao rolar
-const observerOptions = { threshold: 0.1 };
+// Efeito de revelação ao scroll (opcional)
+const observerOptions = {
+    threshold: 0.1
+};
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -16,9 +20,10 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.project-card, .skill-item').forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(30px)";
-    el.style.transition = "all 0.6s ease-out";
-    observer.observe(el);
+// Aplicar em seções para um fade-in suave
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(20px)";
+    section.style.transition = "all 0.8s ease-out";
+    observer.observe(section);
 });
