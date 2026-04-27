@@ -138,3 +138,10 @@ h1 span {
 }
 
 footer { padding: 4rem 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-p); }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Esconde o menu no mobile ou você pode criar um menu hambúrguer */
+    .hero-btns { display: flex; flex-direction: column; gap: 1rem; }
+    .btn-secondary { margin-left: 0; }
+    .project-meta { flex-direction: column; gap: 0.5rem; }
+}
