@@ -117,31 +117,54 @@ h1 span {
 
 /* Projects */
 .projects { padding: 100px 0; }
-.project-card { background: var(--surface); border: 1px solid var(--border); padding: 3rem; border-radius: 32px; margin-bottom: 2rem; transition: 0.4s; }
-.project-card:hover { border-color: #444; }
+.project-card { 
+    background: var(--surface); 
+    border: 1px solid var(--border); 
+    padding: 3rem; 
+    border-radius: 32px; 
+    margin-bottom: 2rem; 
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.project-card:hover { 
+    border-color: #555; 
+    transform: scale(1.01);
+    background: linear-gradient(145deg, #111 0%, #161616 100%);
+}
+
 .project-tag { color: var(--text-p); text-transform: uppercase; font-size: 0.7rem; border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; }
 .project-info h3 { font-size: 2rem; margin: 1.5rem 0 1rem; }
 .project-meta { margin: 2rem 0; display: flex; gap: 2rem; color: var(--text-p); }
-.btn-live { background: #fff; color: #000; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.project-meta span i { margin-right: 8px; }
+
+.btn-live { background: #fff; color: #000; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; }
 .btn-repo-link { color: var(--text-p); text-decoration: none; margin-left: 1.5rem; }
 
 /* Cursor Glow */
 .cursor-glow {
     position: fixed;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0) 70%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 70%);
     pointer-events: none;
     z-index: 0;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     border-radius: 50%;
+    will-change: transform;
 }
 
 footer { padding: 4rem 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-p); }
 
+/* Icons Colors */
+.fa-js-square { color: #f7df1e; }
+.fa-python { color: #3776ab; }
+
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Esconde o menu no mobile ou você pode criar um menu hambúrguer */
+    .nav-links { display: none; }
     .hero-btns { display: flex; flex-direction: column; gap: 1rem; }
     .btn-secondary { margin-left: 0; }
-    .project-meta { flex-direction: column; gap: 0.5rem; }
+    .project-meta { flex-direction: column; gap: 0.8rem; }
+    .project-card { padding: 2rem; }
+    .project-info h3 { font-size: 1.6rem; }
 }
